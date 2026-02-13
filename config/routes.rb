@@ -2,4 +2,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :weather_forecasts, only: :index
+
+  root "weather_forecasts#index"
 end
