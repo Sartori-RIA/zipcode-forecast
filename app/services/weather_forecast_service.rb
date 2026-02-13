@@ -4,7 +4,7 @@ class WeatherForecastService
   def initialize(zipcode:, country: "US")
     @zipcode = zipcode
     @country = country
-    @api_key = ENV['OPEN_WEATHER_API_KEY']
+    @api_key = ENV["OPEN_WEATHER_API_KEY"]
   end
 
   def call
