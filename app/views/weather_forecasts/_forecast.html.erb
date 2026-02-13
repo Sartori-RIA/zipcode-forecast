@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-header">
+      Weather Forecast For: <%= geo["name"] %> -  <%= geo["country"] %>
+      <%= image_tag "https://openweathermap.org/payload/api/media/file/#{forecast["weather"][0]["icon"]}.png" %>
+    </div>
+
+    <p>
+      <strong>Coordinates:</strong> <%= forecast["coord"]["lat"] %>, <%= forecast["coord"]["lon"] %> <br>
+
+      <strong>Main:</strong> <%= forecast["weather"][0]["main"] %> <br>
+
+      <strong>Description:</strong> <%= forecast["weather"][0]["description"] %> <br>
+
+      <strong>Temp:</strong> <%= forecast["main"]["temp"] %> <br>
+
+      <strong>Feels Link:</strong> <%= forecast["main"]["feels_like"] %> <br>
+
+      <strong> Min:</strong> <%= forecast["main"]["temp_min"] %> <br>
+
+      <strong> Max:</strong> <%= forecast["main"]["temp_max"] %> <br>
+
+      <strong>Pressure:</strong> <%= forecast["main"]["pressure"] %> <br>
+
+      <strong>Humidity: </strong> <%= forecast["main"]["humidity"] %> <br>
+
+      <strong>Wind Speed:</strong> <%= forecast["wind"]["speed"] %> <br>
+
+      <strong>Came from Cache:</strong> <%= came_from_cache %>
+    </p>
+  </div>
+</div>

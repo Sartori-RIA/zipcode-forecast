@@ -1,0 +1,11 @@
+<div class="center">
+  <%= render partial: 'weather_forecasts/form', locals: {zipcode: @zipcode}%>' %>
+
+  <br>
+  <br>
+  <br>
+
+  <% if @forecast.present? %>
+    <%= render partial: 'weather_forecasts/forecast', locals: { forecast: @forecast, geo: @geo, came_from_cache: @came_from_cache } %>
+  <% end %>
+</div>

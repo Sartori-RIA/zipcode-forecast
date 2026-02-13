@@ -8,3 +8,62 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body {
+    font-family: Roboto, serif;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f0eff0;
+    border: 1px solid #f0eff0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    width: 33%;
+    margin: 10px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5);
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
