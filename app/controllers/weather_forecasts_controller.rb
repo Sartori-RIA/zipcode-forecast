@@ -7,8 +7,14 @@ class WeatherForecastsController < ApplicationController
   def index
     @zipcode = params[:zipcode]
 
-    if zipcode_valid?
+    if @zipcode.present? && zipcode_valid?
       @geo, @forecast, @came_from_cache = forecast_service.call
+    else @zipcode.present?
+    flash[:error] = t("errors.zipcode.invalid")
+    end
+
+    if @geo.present? && %w[404 400].include?(@geo["cod"])
+      flash[:error] = t("errors.zipcode.invalid")
     end
   end
 

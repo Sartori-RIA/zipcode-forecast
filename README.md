@@ -17,3 +17,8 @@
 
 Using the [OpenWeather](https://openweathermap.org/api/one-call-3?collection=one_call_api_3.0) to take the weather forecast
 with this library was possible take the weather forecast and geolocation data from the ZipCode
+
+Added the gem [VCR](https://benoittgt.github.io/vcr/#/test_frameworks/rspec_metadata) to reuse responses from OpenWeather in the specs
+so doesn't reach the API Limit
+
+Added flash message to invalid zipcode

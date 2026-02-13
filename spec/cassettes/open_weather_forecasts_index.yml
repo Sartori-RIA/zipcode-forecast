@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/geo/1.0/zip?appid=2efcc896f32429ef1bb1465a21d190f3&zip=73301,US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 13 Feb 2026 15:34:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '75'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/zip?zip=73301%2cus"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"zip":"73301","name":"Austin","lat":30.3264,"lon":-97.7713,"country":"US"}'
+  recorded_at: Fri, 13 Feb 2026 15:34:13 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=2efcc896f32429ef1bb1465a21d190f3&lat=30.3264&lon=-97.7713&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 13 Feb 2026 15:34:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '511'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=30.33&lon=-97.77&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-97.7713,"lat":30.3264},"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"base":"stations","main":{"temp":18.85,"feels_like":19.01,"temp_min":17.86,"temp_max":19.99,"pressure":1019,"humidity":85,"sea_level":1019,"grnd_level":992},"visibility":10000,"wind":{"speed":2.24,"deg":192},"clouds":{"all":92},"dt":1770996634,"sys":{"type":2,"id":2031700,"country":"US","sunrise":1770988391,"sunset":1771028257},"timezone":-21600,"id":4737316,"name":"Travis","cod":200}'
+  recorded_at: Fri, 13 Feb 2026 15:34:13 GMT
+recorded_with: VCR 6.4.0
