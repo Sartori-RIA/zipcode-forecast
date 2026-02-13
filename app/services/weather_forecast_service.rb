@@ -5,8 +5,6 @@ class WeatherForecastService
     @zipcode = zipcode
     @country = country
     @api_key = ENV['OPEN_WEATHER_API_KEY']
-    puts "POTATO"
-    puts @api_key
   end
 
   def call
