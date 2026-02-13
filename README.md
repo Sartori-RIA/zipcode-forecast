@@ -12,6 +12,7 @@
 - Run `cp example.env .env`
 - Add your API KEY on `OPEN_WEATHER_API_KEY`
 - Run `rails s`
+- Open your browser on `http:localhost:3000`
 
 ### Decisions
 
