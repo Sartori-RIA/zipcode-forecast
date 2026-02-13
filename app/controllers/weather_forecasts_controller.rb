@@ -4,6 +4,8 @@ require "net/http"
 require "json"
 
 class WeatherForecastsController < ApplicationController
+  after_action -> { flash.discard }
+
   def index
     @zipcode = params[:zipcode]
 
